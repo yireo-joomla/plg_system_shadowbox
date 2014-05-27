@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_SHADOWBOX</name>
+	<author>Yireo</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>Copyright (C) 2013 Yireo.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>info@yireo.com</authorEmail>
+	<authorUrl>www.yireo.com</authorUrl>
+	<version>1.2.0</version>
+	<description>PLG_SYSTEM_SHADOWBOX_DESC</description>
+
+	<files>
+		<filename plugin="shadowbox">shadowbox.php</filename>
+	</files>
+
+	<media destination="plg_shadowbox">
+	    <folder>css</folder>
+	    <folder>images</folder>
+	    <folder>js</folder>
+	</media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+        		<field name="elements" type="textarea" default="" cols="30" rows="10" label="PLG_SYSTEM_SHADOWBOX_FIELD_ELEMENTS" description="PLG_SYSTEM_SHADOWBOX_FIELD_ELEMENTS_DESC" />
+            </fieldset>
+        	<fieldset name="advanced" addfieldpath="/plugins/system/fancybox/fields">
+		        <field name="use_google_api" type="radio" default="0" label="PLG_SYSTEM_SHADOWBOX_FIELD_USE_GOOGLE_API" description="PLG_SYSTEM_SHADOWBOX_FIELD_USE_GOOGLE_API_DESC">
+        			<option value="0">No</option>
+		        	<option value="1">Yes</option>
+        		</field>
+		        <field name="load_css" type="radio" default="1" label="PLG_SYSTEM_SHADOWBOX_FIELD_LOAD_CSS" description="PLG_SYSTEM_SHADOWBOX_FIELD_LOAD_CSS_DESC">
+        			<option value="0">No</option>
+		        	<option value="1">Yes</option>
+        		</field>
+		        <field name="load_jquery" type="radio" default="1" label="PLG_SYSTEM_SHADOWBOX_FIELD_LOAD_JQUERY" description="PLG_SYSTEM_SHADOWBOX_FIELD_LOAD_JQUERY_DESC">
+        			<option value="0">No</option>
+		        	<option value="1">Yes</option>
+        		</field>
+		        <field name="load_shadowbox" type="radio" default="1" label="PLG_SYSTEM_SHADOWBOX_FIELD_LOAD_SHADOWBOX" description="PLG_SYSTEM_SHADOWBOX_FIELD_LOAD_SHADOWBOX_DESC">
+        			<option value="0">No</option>
+		        	<option value="1">Yes</option>
+        		</field>
+		        <field name="exclude_components" type="components" label="PLG_SYSTEM_SHADOWBOX_FIELD_EXCLUDE_COMPONENTS" description="PLG_SYSTEM_SHADOWBOX_FIELD_EXCLUDE_COMPONENTS_DESC" />
+        		<field name="namespace" type="text" default="" label="PLG_SYSTEM_SHADOWBOX_FIELD_NAMESPACE" description="PLG_SYSTEM_SHADOWBOX_FIELD_NAMESPACE_DESC" />
+            </fieldset>
+        </fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="plg_system_shadowbox">http://www.yireo.com/updates/plg_system_shadowbox.xml</server>
+	</updateservers>
+</extension>
