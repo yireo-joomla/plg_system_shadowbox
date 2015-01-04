@@ -3,7 +3,7 @@
  * Joomla! System plugin - Shadowbox
  *
  * @author Yireo (info@yireo.com)
- * @copyright Copyright 2011
+ * @copyright Copyright 2015
  * @license GNU Public License
  * @link http://www.yireo.com
  */
